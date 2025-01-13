@@ -1,0 +1,30 @@
+﻿@model AcunmedyaAkademiPortfolio.Models.TblContact
+@{
+    ViewBag.Title = "AddContact";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Yeni İletişim Bilgisi Ekleme Sayfası</h2>
+    <form method="post">
+        <label>Adres</label>
+        @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.Adress)</span>
+        <br />
+        <label>Telefon</label>
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.Phone)</span>
+        <br />
+        <label>E-Mail Adresi</label>
+        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.Email)</span>
+        <br />
+        <label>Konum</label>
+        @Html.TextBoxFor(x => x.MapUrl, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.MapUrl)</span>
+        <br />
+
+        <button class="btn btn-info">Kaydet</button>
+    </form>
+</div>
+

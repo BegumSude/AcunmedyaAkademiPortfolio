@@ -1,0 +1,28 @@
+﻿@model AcunmedyaAkademiPortfolio.Models.TblService
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>Hizmet Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.ServiceId)
+
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.ServiceName, new { @class = "form-control" })
+    <span class="text-danger">@Html.ValidationMessageFor(x => x.ServiceName)</span>
+    <br />
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.ServiceDescription, new { @class = "form-control" })
+    <span class="text-danger">@Html.ValidationMessageFor(x => x.ServiceDescription)</span>
+    <br />
+   
+
+    <button type="submit" class="btn btn-info">Güncelle</button>
+</form>
+
+
+
+
+

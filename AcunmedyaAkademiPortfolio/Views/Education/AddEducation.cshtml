@@ -1,0 +1,34 @@
+﻿@model AcunmedyaAkademiPortfolio.Models.TblEducation
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Yeni Eğitim EKleme Sayfası</h2>
+    <form method="post">
+        <label>Bölüm</label>
+        @Html.TextBoxFor(x => x.Department, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.Department)</span>
+        <br />
+        <label>Başlangıç Tarihi</label>
+        @Html.TextBoxFor(x => x.StartYear, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.StartYear)</span>
+        <br />
+        <label>Bitiş Tarihi</label>
+        @Html.TextBoxFor(x => x.EndYear, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.EndYear)</span>
+        <br />
+        <label>Okul İsmi</label>
+        @Html.TextBoxFor(x => x.SchoolName, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.SchoolName)</span>
+        <br />
+
+        <button class="btn btn-info">Kaydet</button>
+    </form>
+</div>
+
+
+
+
+

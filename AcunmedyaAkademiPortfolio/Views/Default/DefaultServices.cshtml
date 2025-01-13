@@ -1,0 +1,64 @@
+﻿@model List<AcunmedyaAkademiPortfolio.Models.TblService>
+<section id="services" class="services section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Hizmet Hedeflerim</h2>
+        <p>@Model[0].ServiceMainDescription</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <!-- Soldaki Hizmetler -->
+            <div class="col-lg-6 col-md-6">
+                <div class="row gy-4">
+
+                    <div class="col-lg-6 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">@Model[0].ServiceName</a></h4>
+                            <p class="description">@Model[0].ServiceDescription</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-6 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">@Model[1].ServiceName</a></h4>
+                            <p class="description">@Model[1].ServiceDescription</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                </div>
+            </div><!-- End Left Column -->
+            <!-- Sağdaki Hizmetler -->
+            <div class="col-lg-6 col-md-6">
+                <div class="row gy-4">
+
+                    <div class="col-lg-6 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">@Model[2].ServiceName</a></h4>
+                            <p class="description">@Model[2].ServiceDescription</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-6 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+                        <div>
+                            <h4 class="title"><a href="service-details.html" class="stretched-link">@Model[3].ServiceName</a></h4>
+                            <p class="description">@Model[3].ServiceDescription</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                </div>
+            </div><!-- End Right Column -->
+
+        </div>
+
+    </div>
+
+</section>
+</section>

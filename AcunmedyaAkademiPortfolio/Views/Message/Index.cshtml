@@ -1,0 +1,34 @@
+﻿@model List<AcunmedyaAkademiPortfolio.Models.TblMessage>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h2>Gelen Mesaj İstekleri</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>İsim</th>
+        <th>E-Posta</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Sil</th>
+       
+    </tr>
+
+     @foreach(var item in Model)
+     {
+         count++;
+         <tr>
+             <td>@count</td>
+             <td>@item.Name</td>
+             <td>@item.Email</td>
+             <td>@item.Subject</td>
+             <td>@item.MessageContent</td>
+             <td><a href="/Message/DeleteMessage/@item.MessageId" class="btn btn-info">Sil</a></td>
+
+
+         </tr>
+     }
+</table>

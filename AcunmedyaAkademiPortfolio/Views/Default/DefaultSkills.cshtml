@@ -1,0 +1,58 @@
+﻿@model List<AcunmedyaAkademiPortfolio.Models.TblSkill>
+
+
+    <section id="skills" class="skills section light-background">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Yeteneklerim</h2>
+            
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row skills-content skills-animation">
+
+                <div class="row">
+
+                    <!-- Soldaki 2 öğe -->
+                    <div class="col-lg-6">
+                        <div class="progress">
+                            <span class="skill"><span>@Model[0].Name</span> <i class="val">@Model[0].Percentage</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@Model[0].Percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skill Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>@Model[1].Name</span> <i class="val">@Model[1].Percentage</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@Model[1].Percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skill Item -->
+
+                    </div><!-- End Left Column -->
+                    <!-- Sağdaki 2 öğe -->
+                    <div class="col-lg-6">
+                        <div class="progress">
+                            <span class="skill"><span>@Model[2].Name</span> <i class="val">@Model[2].Percentage</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@Model[2].Percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skill Item -->
+
+                        <div class="progress">
+                            <span class="skill"><span>@Model[3].Name</span> <i class="val">@Model[3].Percentage</i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="@Model[3].Percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div><!-- End Skill Item -->
+
+                    </div><!-- End Right Column -->
+
+                </div><!-- End Row -->
+
+            </div><!-- End Container -->
+        </div>
+
+</section><!-- End Skills Section -->
+

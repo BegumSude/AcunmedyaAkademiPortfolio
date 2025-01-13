@@ -1,0 +1,37 @@
+﻿@model AcunmedyaAkademiPortfolio.Models.TblExperience
+@{
+    ViewBag.Title = "UpdateExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>Deneyim Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.ExperienceId)
+
+    <label>Pozisyon</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <span class="text-danger">@Html.ValidationMessageFor(x => x.Title)</span>
+    <br />
+    <label>Başlangıç Tarihi</label>
+    @Html.TextBoxFor(x => x.StartYear, new { @class = "form-control" })
+    <span class="text-danger">@Html.ValidationMessageFor(x => x.StartYear)</span>
+    <br />
+    <label>Bitiş Tarihi</label>
+    @Html.TextBoxFor(x => x.EndYear, new { @class = "form-control" })
+    <span class="text-danger">@Html.ValidationMessageFor(x => x.EndYear)</span>
+    <br />
+    <label>Şirket İsmi</label>
+    @Html.TextBoxFor(x => x.Company, new { @class = "form-control" })
+    <span class="text-danger">@Html.ValidationMessageFor(x => x.Company)</span>
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <span class="text-danger">@Html.ValidationMessageFor(x => x.Description)</span>
+    <br />
+
+    <button type="submit" class="btn btn-info">Güncelle</button>
+</form>
+
+
+

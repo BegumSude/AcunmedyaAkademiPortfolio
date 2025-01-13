@@ -1,0 +1,35 @@
+﻿@model AcunmedyaAkademiPortfolio.Models.TblTestimonial
+@{
+    ViewBag.Title = "AddTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <h2>Yeni Referans EKleme Sayfası</h2>
+    <form method="post">
+        <label>İsim-Soyisim</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.Name)</span>
+        <br />
+        <label>Meslek</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.Title)</span>
+        <br />
+        <label>Yorum</label>
+        @Html.TextBoxFor(x => x.Comment, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.Comment)</span>
+        <br />
+        <label>Fotoğraf</label>
+        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.ImageUrl)</span>
+        <br />
+
+        <button class="btn btn-info">Kaydet</button>
+    </form>
+</div>
+
+
+
+
+

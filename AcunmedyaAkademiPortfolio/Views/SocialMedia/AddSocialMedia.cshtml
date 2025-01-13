@@ -1,0 +1,32 @@
+﻿@model AcunmedyaAkademiPortfolio.Models.TblSocialMedia
+@{
+    ViewBag.Title = "AddSocialMedia";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="container">
+    <h2>Yeni Sosyal Medya Hesabı EKleme Sayfası</h2>
+    <form method="post">
+        <label>Icon Url</label>
+        @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.Icon)</span>
+        <br />
+        <label>Platform</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.Name)</span>
+        <br />
+        <label>Hesap Linki</label>
+        @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+        <span class="text-danger">@Html.ValidationMessageFor(x => x.Url)</span>
+        <br />
+        
+        <button class="btn btn-info">Kaydet</button>
+    </form>
+</div>
+
+
+
+
+
+

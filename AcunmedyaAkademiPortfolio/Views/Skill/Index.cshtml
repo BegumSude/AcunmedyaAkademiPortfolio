@@ -1,0 +1,39 @@
+﻿@model List<AcunmedyaAkademiPortfolio.Models.TblSkill>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<div class="container">
+    <h2>Yeteneklerim</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Yetenek İsmi</th>
+            <th>Yetenek Oranı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.Name</td>
+                <td>@item.Percentage</td>
+             
+                <td><a href="/Skill/DeleteEducation/@item.SkillId" class="btn btn-info">Sil</a></td>
+                <td><a href="/Skill/DeleteEducation/@item.SkillId" class="btn btn-info">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+
+    <br />
+    <a href="/Skill/AddSkill/" class="btn btn-info">Yeni Yetenek Ekle</a>
+
+
+</div>
+
+
